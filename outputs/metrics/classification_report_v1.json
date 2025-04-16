@@ -1,0 +1,29 @@
+{
+    "model": "model_v1",
+    "timestamp": "2025-04-16T23:25:38",
+    "metrics": {
+        "overall": {
+            "accuracy": 0.7,
+            "precision": 0.72,
+            "recall": 0.7,
+            "f1_score": 0.7
+        },
+        "per_class": {
+            "Apple_Rust": {
+                "precision": 0.75,
+                "recall": 0.65,
+                "f1_score": 0.7
+            },
+            "Apple_Scab": {
+                "precision": 0.6,
+                "recall": 0.75,
+                "f1_score": 0.67
+            },
+            "Healthy": {
+                "precision": 0.8,
+                "recall": 0.71,
+                "f1_score": 0.75
+            }
+        }
+    }
+}
