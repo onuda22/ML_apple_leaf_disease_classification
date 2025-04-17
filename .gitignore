@@ -1,2 +1,7 @@
 data/combined/*
+data/*
+!data/preview
 !data/combined/README.md
+
+notebooks/.ipynb_checkpoints
+src/__pycache__
