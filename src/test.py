@@ -3,6 +3,7 @@ import json
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import load_model
@@ -37,6 +38,36 @@ class_labels = test_generator.class_indices
 with open("class_indices.json", "w") as f:
     json.dump(class_labels, f)
 
+# ====== Accuracy and Loss ======
+train_log = pd.read_csv('outputs/logs/train-logs.csv')
+
+train_accuracy = train_log['accuracy']
+val_accuracy = train_log['val_accuracy']
+
+train_loss = train_log['loss']
+val_loss = train_log['val_loss']
+
+fig, axs = plt.subplots(1, 2)
+
+axs[0].plot(train_accuracy, label='Train Accuracy')
+axs[0].plot(val_accuracy, label='Validation Accuracy')
+axs[0].set_title('Model Accuracy')
+axs[0].set_xlabel('Epoch')
+axs[0].set_ylabel('Accuracy')
+axs[0].legend()
+axs[0].grid(True)
+
+axs[1].plot(train_loss, label='Train Loss')
+axs[1].plot(val_loss, label='Validation Loss')
+axs[1].set_title('Model Loss')
+axs[1].set_xlabel('Epoch')
+axs[1].set_ylabel('Loss')
+axs[1].legend()
+axs[1].grid(True)
+
+plt.tight_layout()
+plt.savefig('outputs/metrics/accuracy_and_loss_v1.png')
+plt.close()
 # ======= Confusion Matrix ========
 cm = confusion_matrix(y_true, y_pred_classes)
 labels = list(class_labels.keys())
