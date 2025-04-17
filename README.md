@@ -81,6 +81,23 @@ model.compile(optimizer=RMSprop(learning_rate=(0.0001)),
 
 ---
 
+---
+
+## 🛠 Requirements
+
+- Python 3.9+
+- TensorFlow
+- scikit-learn
+- NumPy, matplotlib, seaborn
+
+Install all dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
 ## 🚀 How to Use
 
 ### 1. Prepare Data
@@ -160,23 +177,6 @@ Results (confusion matrix & metrics) will be saved in `outputs/metrics/`.
   }
 }
 ```
-
----
-
-## 🛠 Requirements
-
-- Python 3.9+
-- TensorFlow
-- scikit-learn
-- NumPy, matplotlib, seaborn
-
-Install all dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## 🙋‍♂️ Author
 
