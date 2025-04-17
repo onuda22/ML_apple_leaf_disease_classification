@@ -120,9 +120,13 @@ Results (confusion matrix & metrics) will be saved in `outputs/metrics/`.
 ## 📊 Example Output
 
 - **Accuracy and Loss:**
+
   ![accuracy_loss](outputs/metrics/accuracy_and_loss_v1.png)
+
 - **Confusion Matrix:**
+
   ![confusion_matrix](outputs/metrics/confusion_matrix_v1.png)
+
 - **Classification Report:** `outputs/metrics/classification_report_v1.json`
 
 ```json
